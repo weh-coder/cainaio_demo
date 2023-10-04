@@ -1,0 +1,277 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "微软雅黑";
+  list-style: none;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+#header {
+  height: 4em;
+  padding: 1em 0;
+  text-align: center;
+  background-color: #666;
+}
+
+#header img {
+  transition: all 0.5s;
+  height: 100%;
+}
+
+#header img:hover {
+  transform: scale(1.2);
+}
+
+nav {
+  background-color: #333;
+}
+
+nav ul {
+  height: 3em;
+  text-align: center;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+nav ul li a {
+  display: inline-block;
+  color: #fff;
+  font-size: 1em;
+  line-height: 3em;
+  padding: 0 2em;
+  transition: all 0.5s;
+}
+
+nav ul li a:hover {
+  transform: scale(1.05);
+  color: #333;
+  background-color: #eee;
+}
+
+.banner {
+  margin: 10px 100px;
+  background: url("../img/banner.jpg") no-repeat center center;
+  background-size: 100%;
+  min-height: 400px;
+  position: relative;
+  transition: all 0.5s;
+}
+
+.banner #banner-title {
+  position: absolute;
+  top: 100px;
+  right: 60px;
+  font-size: 2em;
+  color: #fff;
+}
+
+.banner:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+article {
+  margin: 10px 100px;
+}
+
+article .article-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+article .article-content li {
+  width: 24%;
+  list-style: none;
+  box-shadow: 0 8px 8px 0 #a7a3a37d;
+  border-radius: 5px;
+  transition: all 0.4s;
+}
+
+article .article-content li img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+article .article-content li .title {
+  font-weight: bolder;
+  margin: 0.5em 0;
+}
+
+article .article-content li p {
+  font-size: smaller;
+  color: #666;
+  text-align: start;
+  text-indent: 2em;
+}
+
+article .article-content li a {
+  color: #000;
+}
+
+article .article-content li:hover {
+  opacity: 0.8;
+  box-shadow: 0 8px 8px 0 grey;
+  transform: scale(1.05);
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+
+footer {
+  background-color: #333;
+  text-align: center;
+}
+
+footer .flink {
+  padding: 1em 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+footer .flink li {
+  list-style: none;
+}
+
+footer .flink .flink-content {
+  margin: 0 2em;
+  width: 10em;
+}
+
+footer .flink .flink-content .title {
+  line-height: 2em;
+}
+
+footer .flink .flink-content .title a {
+  color: #eee;
+  font-weight: bold;
+}
+
+footer .flink .flink-content .title-list {
+  line-height: 2em;
+}
+
+footer .flink .flink-content .title-list a {
+  color: #666;
+}
+
+footer .flink .flink-content .title-list a:hover {
+  color: #fff;
+}
+
+footer hr {
+  border-top: 1px solid #ccc;
+  margin: 0 100px;
+}
+
+footer p {
+  line-height: 4em;
+  color: #ccc;
+}
+
+.option-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  line-height: 50px;
+  position: fixed;
+  z-index: 100;
+  top: 75%;
+  right: 2%;
+}
+
+.option-box img {
+  display: inline;
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 1023px) {
+  #header {
+    height: 3em;
+    padding: 1em 0;
+  }
+
+  .banner {
+    margin: 1em 3em;
+  }
+
+  .banner #banner-title {
+    font-size: 1.5em;
+  }
+
+  nav a {
+    font-size: 0.9em;
+    margin: 0 1em;
+  }
+
+  article {
+    margin: 1em 3em;
+  }
+
+  article .article-content li {
+    width: 48%;
+    margin: 0.5em 0 1em;
+  }
+
+  footer hr {
+    margin: 0 3em;
+  }
+}
+
+@media (max-width: 767px) {
+  nav ul {
+    height: 2.5em;
+    line-height: 2.5em;
+  }
+
+  nav ul li a {
+    font-size: 0.8em;
+    margin: 0;
+    padding: 0 0.7em;
+  }
+
+  .banner {
+    min-height: 250px;
+    margin: 0;
+    text-align: center;
+  }
+
+  article {
+    margin: 0;
+  }
+
+  article .article-content li {
+    flex-grow: 1;
+    width: 100%;
+    margin: 0.5em 0 1em;
+    text-align: center;
+  }
+
+  footer {
+    font-size: 0.9em;
+  }
+
+  footer .flink .title-list li {
+    display: none;
+  }
+
+  footer hr,
+  footer .flink .flink-content {
+    margin: 0;
+  }
+
+  .option-box {
+    display: none;
+  }
+}
